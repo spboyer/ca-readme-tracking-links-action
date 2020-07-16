@@ -23,7 +23,7 @@ WORKDIR /app
 COPY ["app/readme-link-trends.csproj", ""]
 COPY app/ .
 
-ADD entrypoint.sh /entrypoint.sh
+ADD app/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
