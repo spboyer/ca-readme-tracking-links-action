@@ -21,7 +21,6 @@ namespace readme_link_trends
             string result = regex.Replace(readme, m => Tracking.AppendTrackingInfo(m.Groups[0].Value, "regex", "github", "shboyer"));
 
             File.WriteAllText("/home/runner/work/_temp/_github_home/README.md", result); 
-            
         }
 
     }
