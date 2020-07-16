@@ -18,5 +18,9 @@ jobs:
 
       - name: Commit results
         run: |
+            # change John Doe with the name you want to display
+            git config --global user.name "Shayne Boyer"
+            # change @[john.doe] with your @[username]
+            git config --global user.email "spboyer@live.com"
             git commit README.md -m 'Re-build README.md' || echo "No changes to commit"
             git push origin || echo "No changes to commit"
