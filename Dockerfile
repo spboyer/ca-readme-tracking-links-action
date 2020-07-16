@@ -1,7 +1,8 @@
-#!/bin/sh -l
+FROM alpine:3.10
 
-set -e
+RUN apk update \
+    && apk add curl jq
 
-README=${INPUT_README:-./README.md}
+COPY entrypoint.sh /
 
-printf -f "${README}"
+ENTRYPOINT ["/entrypoint.sh"]
