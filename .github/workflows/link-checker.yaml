@@ -9,9 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-        
-             fetch-depth: 0
       - name: Update readme
 
         uses: ./
@@ -26,18 +23,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: generate
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
       - name: Download results from the generate job
         uses: actions/download-artifact@v2
         with:
             name: readme
-      - name: Add artifact to repo
+      - name: Commit updated readme
         run: |
-          # change John Doe with the name you want to display
           git config --global user.name "Shayne Boyer"
-          # change @[john.doe] with your @[username]
           git config --global user.email "spboyer@live.com"
-          git add --all
+          git commit -m 'links checked'
+          git add README.md
           git push
