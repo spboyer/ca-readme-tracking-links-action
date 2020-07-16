@@ -1,0 +1,12 @@
+name: "Advocate Trends Link Checker"
+author: "Shayne Boyer <spboyer@live.com>"
+description: "Parses the main README.md of your repository to ensure that any href links have proper trend keys attached."
+outputs:
+    readme:
+      description: "A checked and potentially changed README file add to the Pull-Request."
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'book'
+  color: 'blue'
