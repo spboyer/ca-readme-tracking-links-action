@@ -24,7 +24,7 @@ namespace readme_link_trends
 
             string result = regex.Replace(readme, m => Tracking.AppendTrackingInfo(m.Groups[0].Value, track_event, track_channel, track_alias));
 
-            File.WriteAllText("/home/runner/work/_temp/_github_home/README.md", result); 
+            File.WriteAllText("./README.md", result); 
         }
 
     }
