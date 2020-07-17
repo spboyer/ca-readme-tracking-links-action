@@ -18,15 +18,11 @@ public static class Tracking
         foreach(var r in DefaultDomainsRegex)
         {
             if (r.IsMatch(link))
-            {
                 makeLink = true;
-            }
         }
 
         if (makeLink == false)
-        {
             return link;
-        }
 
         UriBuilder builder = new UriBuilder(link);
 
@@ -35,19 +31,19 @@ public static class Tracking
         
         return builder.Uri.ToString();
     }
+
     private static UriBuilder RemoveLocale(this UriBuilder builder)
     {
         Regex localeMatcher = new Regex("^/\\w{2}-\\w{2}");
         builder.Path = localeMatcher.Replace(builder.Path, string.Empty);
         return builder;
     }
+
     private static UriBuilder AddTrackingCode(this UriBuilder builder, string eventName, string channel, string alias)
     {
         const string trackingName = "WT.mc_id";
         string trackingCode = $"{eventName}-{channel}-{alias}";
         
-        
-
         var qs = QueryHelpers.ParseQuery(builder.Query);
         qs.Remove(trackingName);
         qs.Add(trackingName, trackingCode);
