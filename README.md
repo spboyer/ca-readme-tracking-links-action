@@ -20,7 +20,7 @@ This should be **github**, feel free to change to anything relative to your proj
 
 ## `README`
 
-The action will write a new version of the http://readme.md/?WT.mc_id=actions-testing_actions-shboyer file. The usage section below includes the needed **commit** functionality to merge to master.
+The action will write a new version of the **README** file. The usage section below includes the needed **commit** functionality to merge to master.
 
 ## Example usage
 
