@@ -42,9 +42,9 @@ jobs:
 
         - name: Commit results
         run: |
-            git config --global http://user.name/?WT.mc_id=actions-testing_actions-shboyer "Shayne Boyer"
-            git config --global http://user.email/?WT.mc_id=actions-testing_actions-shboyer "spboyer@http://live.com/?WT.mc_id=actions-testing_actions-shboyer"
-            git commit http://readme.md/?WT.mc_id=actions-testing_actions-shboyer -m 'Re-build http://readme.md/?WT.mc_id=actions-testing_actions-shboyer' || echo "No changes to commit"
+            git config --global user.name "Shayne Boyer"
+            git config --global user.email "spboyer@noreply.live.com"
+            git commit README -m 'Re-build README' || echo "No changes to commit"
             git push origin || echo "No changes to commit"
 ```
 
