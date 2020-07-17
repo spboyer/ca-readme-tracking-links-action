@@ -14,6 +14,20 @@ public static class Tracking
     };
     public static string AppendTrackingInfo(string link, string eventName, string channel, string alias)
     {
+        var makeLink = false;
+        foreach(var r in DefaultDomainsRegex)
+        {
+            if (r.IsMatch(link))
+            {
+                makeLink = true;
+            }
+        }
+
+        if (makeLink == false)
+        {
+            return link;
+        }
+
         UriBuilder builder = new UriBuilder(link);
 
         builder = builder.AddTrackingCode(eventName, channel, alias);
@@ -32,6 +46,8 @@ public static class Tracking
         const string trackingName = "WT.mc_id";
         string trackingCode = $"{eventName}-{channel}-{alias}";
         
+        
+
         var qs = QueryHelpers.ParseQuery(builder.Query);
         qs.Remove(trackingName);
         qs.Add(trackingName, trackingCode);
