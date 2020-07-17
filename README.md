@@ -1,6 +1,6 @@
 # ca-readme-tracking-links-action
 
-This action inspects the main http://readme.md/?WT.mc_id=actions-testing_actions-shboyer of your repository and ensures that links shared are properly tagged for advocacy trends.
+This action inspects the main README of your repository and ensures that links shared are properly tagged for advocacy trends.
 
 ## Inputs
 
