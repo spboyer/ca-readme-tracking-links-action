@@ -15,6 +15,10 @@ jobs:
 
       - name: Update readme
         uses: ./
+        with:
+          alias: 'shboyer'
+          event: 'actions'
+          channel: 'testing_actions'
 
       - name: Commit results
         run: |
