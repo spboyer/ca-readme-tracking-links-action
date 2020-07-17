@@ -1,6 +1,6 @@
 # ca-readme-tracking-links-action
 
-This action inspects the main README.md of your repository and ensures that links shared are properly tagged for advocacy trends.
+This action inspects the main http://readme.md/?WT.mc_id=actions-testing_actions-shboyer of your repository and ensures that links shared are properly tagged for advocacy trends.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ This should be **github**, feel free to change to anything relative to your proj
 
 ## `README`
 
-The action will write a new version of the README.md file. The usage section below includes the needed **commit** functionality to merge to master.
+The action will write a new version of the http://readme.md/?WT.mc_id=actions-testing_actions-shboyer file. The usage section below includes the needed **commit** functionality to merge to master.
 
 ## Example usage
 
@@ -42,16 +42,16 @@ jobs:
 
         - name: Commit results
         run: |
-            git config --global user.name "Shayne Boyer"
-            git config --global user.email "spboyer@live.com"
-            git commit README.md -m 'Re-build README.md' || echo "No changes to commit"
+            git config --global http://user.name/?WT.mc_id=actions-testing_actions-shboyer "Shayne Boyer"
+            git config --global http://user.email/?WT.mc_id=actions-testing_actions-shboyer "spboyer@http://live.com/?WT.mc_id=actions-testing_actions-shboyer"
+            git commit http://readme.md/?WT.mc_id=actions-testing_actions-shboyer -m 'Re-build http://readme.md/?WT.mc_id=actions-testing_actions-shboyer' || echo "No changes to commit"
             git push origin || echo "No changes to commit"
 ```
 
 ## Link Testing Area
 
-[VS](https://visualstudio.com)
+[VS](https://visualstudio.com/?WT.mc_id=actions-testing_actions-shboyer)
 
-[Create a Web API](https://docs.microsoft.com/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio)
+[Create a Web API](https://docs.microsoft.com/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio&WT.mc_id=actions-testing_actions-shboyer)
 
 No Link Test
