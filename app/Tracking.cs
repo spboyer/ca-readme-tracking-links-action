@@ -12,7 +12,6 @@ public static class Tracking
         new Regex("(.*\\.)?msdn\\.com$", RegexOptions.IgnoreCase),
         new Regex("(.*\\.)?visualstudio\\.com$", RegexOptions.IgnoreCase)
     };
-
     public static string AppendTrackingInfo(string link, string eventName, string channel, string alias)
     {
         UriBuilder builder = new UriBuilder(link);
@@ -22,14 +21,12 @@ public static class Tracking
         
         return builder.Uri.ToString();
     }
-
     private static UriBuilder RemoveLocale(this UriBuilder builder)
     {
         Regex localeMatcher = new Regex("^/\\w{2}-\\w{2}");
         builder.Path = localeMatcher.Replace(builder.Path, string.Empty);
         return builder;
     }
-
     private static UriBuilder AddTrackingCode(this UriBuilder builder, string eventName, string channel, string alias)
     {
         const string trackingName = "WT.mc_id";

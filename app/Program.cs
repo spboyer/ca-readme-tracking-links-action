@@ -10,7 +10,6 @@ namespace readme_link_trends
         {
             ProcessReadMe();
         }
-
         static void ProcessReadMe()
         {
             var readme = File.ReadAllText("./README.md");
@@ -26,6 +25,5 @@ namespace readme_link_trends
 
             File.WriteAllText("./README.md", result); 
         }
-
     }
 }
